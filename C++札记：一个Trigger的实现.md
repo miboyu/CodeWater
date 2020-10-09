@@ -115,11 +115,11 @@ int main()
 
 输出结果为
 
-![img](C++札记：一个Trigger的实现.assets/640)
+![img](image/C++札记：一个Trigger的实现01.webp)
 
 说明只在i=6的时候执行了一次。如果改为一直执行，结果为
 
-![img](C++札记：一个Trigger的实现.assets/641)
+![img](image/C++札记：一个Trigger的实现02.webp)
 
 
 
@@ -252,7 +252,7 @@ int main()
 
 输出结果为
 
-![img](C++札记：一个Trigger的实现.assets/642)
+![img](image/C++札记：一个Trigger的实现03.webp)
 
 
 

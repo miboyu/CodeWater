@@ -4,9 +4,9 @@
 
 
 
-话不多说，先上代码（别嫌弱智![img](Fortran基础篇01：爱之初印象.assets/2_05.png)）
+话不多说，先上代码（别嫌弱智:joy:）
 
-![img](Fortran基础篇01：爱之初印象.assets/640)
+![img](image/Fortran基础篇01：爱之初印象01.jpg)
 
 
 
@@ -86,4 +86,4 @@ READ(*,*)函数用于从控制台读取内容，读取的值将存入READ(*,*)�
 
 最后看一下运行效果，可以看出，输出的姓名只有“一二三四五”(10字符)。聪明的你有没有注意到，输出内容最前面都有一个空格？更高级的输出格式控制将在后面的文章中讲解，敬请期待！
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/2PvdnjYMmbwYOGDC8T5HoFyicKiaVkClklnsBFrsUCv9nibOrR8dWJ77Lve6KOe2Z8xsfuJuz0NdmIty4bfsoRc0A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](image/Fortran基础篇01：爱之初印象02.jpg)
