@@ -2,7 +2,7 @@
 
 **rsync**是一个用于文件同步的命令行工具，官方解释为"a fast, versatile, remote (and local) file-copying tool"，落脚点在于file-copying，但又不同于常规的文件复制。Windows用户在复制文件（夹）时经常遇到下面这个弹窗（同名文件问题）
 
-![img](image/拓展：备份神器rsync01.webp)
+![img](attachments/拓展：备份神器rsync01.webp)
 
 这时需要用户决定保留哪一个，三五个文件可以手动处理，成百上千则会是一场噩梦，而这经常出现在文件备份的过程中。可能你会说直接全部替换，但日常备份真正需要复制的只是少部分改动或新加的文件，全部替换会浪费大量时间做无用功。这种情况下，rsync就有了用武之地了。
 
@@ -17,7 +17,7 @@ touch myfiles/file{1..5}   # 在文件夹中新建一些文件
 
 完成后效果如下
 
-![img](image/拓展：备份神器rsync02.webp)
+![img](attachments/拓展：备份神器rsync02.webp)
 
 现在我们想把file2和file4备份到另一个地方（如backup中），使用rsync命令格式为
 
@@ -27,7 +27,7 @@ rsync myfiles/file2 myfiles/file4 backup/
 
 完成后效果如下
 
-![img](image/拓展：备份神器rsync03.webp)
+![img](attachments/拓展：备份神器rsync03.webp)
 
 可以看到多出了一个文件夹backup，里面有备份好的file2和file4，这种使用方式与cp类似。
 
@@ -39,7 +39,7 @@ rsync -a myfiles/ backup/    # -a选项用于整体备份
 
 完成后效果如下
 
-![img](image/拓展：备份神器rsync04.webp)
+![img](attachments/拓展：备份神器rsync04.webp)
 
 **注意**：上述命令中myfiles后面的"/"必须带上，表明myfiles和backup是同级别的文件夹，否则myfiles将被视为一个子文件夹备份到backup中，backup后面的"/"则可带可不带。
 
@@ -49,7 +49,7 @@ rsync -a myfiles backup/    # myfiles后无"/"
 
 完成后效果如下（注意与前面对比）
 
-![img](image/拓展：备份神器rsync05.webp)
+![img](attachments/拓展：备份神器rsync05.webp)
 
 
 现在看来rsync备份和普通复制粘贴也没啥区别，我们来更新某些文件试试
@@ -62,7 +62,7 @@ rm myfiles/file1            # 删除file1
 
 备份之前是这样的，myfiles中file1没了，file2的时间戳更新了，新加了一个new_file，backup中还保持原样。
 
-![img](image/拓展：备份神器rsync06.webp)
+![img](attachments/拓展：备份神器rsync06.webp)
 
 ```bash
 rsync -avh --progress --delete myfiles/ backup/  # 后面再解释各选项意思
@@ -70,11 +70,11 @@ rsync -avh --progress --delete myfiles/ backup/  # 后面再解释各选项意�
 
 备份过程如下
 
-![img](image/拓展：备份神器rsync07.webp)
+![img](attachments/拓展：备份神器rsync07.webp)
 
 可以看出，file1被删除了，file2和new_file进行了复制，其它则没有变化，完成后效果如下
 
-![img](image/拓展：备份神器rsync08.webp)
+![img](attachments/拓展：备份神器rsync08.webp)
 
 
 到这里，rsync的基本使用格式也清楚了
@@ -114,4 +114,4 @@ rsync -bavh src1... dest/
 如果觉得对你有用，请戳下面的“在看”；如果觉得对别人有用，欢迎分享；如果喜欢本公众号，请加关注哦！:wink:
 
 
-![img](image/codewater.webp)
+![img](attachments/codewater.webp)

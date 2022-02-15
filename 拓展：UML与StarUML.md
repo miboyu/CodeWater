@@ -6,7 +6,7 @@ UML是Unified Modeling Language的缩写，意为**统一建模语言**，多用
 
 如果把一个模型比作一本书，别人做好的模型是已出版的书，自己要建的模型是待写的书，无论是看别人的书还是自己写书，都需要对这本书的内容有一个整体的把握，才能真正看懂或者写好。**UML图**在“看书”或“写书”过程中的作用相当于书的目录，甚至超越目录这一简单的一维知识链表，而上升到**高维知识图谱**的层级，如下面展示的C++ IO流继承关系图（图片来自https://en.cppreference.com/w/cpp/io）。
 
- ![img](image/拓展：UML与StarUML01.webp)
+ ![img](attachments/拓展：UML与StarUML01.webp)
 
 
 
@@ -16,19 +16,19 @@ UML图不是凭空产生的，许多模型并没有提供相应的UML图。如�
 
 网上关于UML的介绍及教学多如牛毛，深浅不一，总能找到符合你自己的内容。这里我想推荐一个[网站](http://etutorials.org/Programming/Learning+uml/)，粗略看了下，感觉里面内容挺翔实的，更为重要的是它的主页Home下还有更多精彩内容！！！
 
-![img](image/拓展：UML与StarUML01.webp)
+![img](attachments/拓展：UML与StarUML01.webp)
 
 
 
 说了这么多理论，也该动动手了，用什么画UML图呢？网上搜一搜，软件也有一大堆，这个[网站](http://www.umlchina.com/tools/newindex1.htm)还专门总结了现有的各种UML软件及特点，可以说相当全面了。
 
-![img](image/拓展：UML与StarUML03.webp)
+![img](attachments/拓展：UML与StarUML03.webp)
 
 
 
 微软Office系列里的Visio支持UML图绘制，但功能相对较弱，用起来不是很方便。公认的最流行的Enterprise Architect功能强大，但学习成本也较高（反正我摸半天也不知道怎么把图拖上去:joy:）。这里我推荐的是标题中的[StarUML](http://staruml.io/)，如封面图所示（图片来自StarUML官网），功能不多不少，界面漂亮，操作简单，自己捣鼓两下也差不多会用了。
 
-![img](image/拓展：UML与StarUML04.webp)
+![img](attachments/拓展：UML与StarUML04.webp)
 
 
 
