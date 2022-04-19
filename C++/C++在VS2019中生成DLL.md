@@ -2,6 +2,10 @@
 
 Created: 2022-04-19 10:37
 
+Updated: 2022-04-20 00:40
+
+- 添加 DLL 使用方法，通过配置项目属性实现。
+
 #CPP 
 #DLL 
 #VS2019
@@ -185,7 +189,8 @@ namespace MyDLL
 
 ## 3 使用DLL
 
-新建一个项目，将头文件 `MyDLL.h` 和库文件 `MyDLL.dll`、`MyDLL.lib` 复制到新项目下（此处为了设置简便直接复制过来），同时修改头文件内容：
+### 3.1 直接复制法
+新建一个项目，将头文件 `MyDLL.h` 和库文件 `MyDLL.dll`、`MyDLL.lib` 复制到新项目下，在 2.3 (10) 中给出的位置添加依赖项 `MyDLL.lib`，同时修改头文件内容：
 
 ```cpp
 // MyDLL.h 添加导入标识
@@ -235,6 +240,22 @@ sign(1e-7) = 1
 p1 print:  is of age 0
 p2 print: P2 is of age 20
 ```
+
+### 3.2 配置属性法
+
+有时项目比较复杂，每次都等生成完再复制一次显得不够优雅，直接在项目属性里配置好就可以一劳永逸了。
+
+对于 DLL 的使用需要注意<span style="color:red">两个目录</span>，一个是 `xxx.lib` 所在的目录，一个是 `xxx.dll` 所在的目录。通常生成时这两个都在一个目录下，但使用时要配置两个地方。
+
+(1) lib 目录：在 `VC++ 目录` 下面的 `Library Directories`，直接添加对应的路径，如果生成时按照一定的规律指定输出路径，此处也可以使用类似的路径写法。如果不给定 lib 目录而又在依赖项里添加了 `xxx.lib`，则会在编译期报错。
+
+![[attachments/Pasted image 20220420005606.png]]
+
+(2) dll 目录：在 `Debugging` 下面的 `Environment`，将对应的路径添加到 `PATH` 环境变量，DLL 文件相当于二进制的可执行文件，VS2019 在搜索时<span style="color:red">不是在 lib 目录下</span>查找的，因此这个要单独设置，否则会在运行过程中提示找不到对应的 DLL 文件。
+
+![[attachments/Pasted image 20220420010217.png]]
+
+配置完成以后则可以正常使用 DLL 运行自己的程序。
 
 ## 4 头文件改造
 
