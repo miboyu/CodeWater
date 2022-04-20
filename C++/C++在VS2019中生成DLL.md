@@ -155,9 +155,9 @@ namespace MyDLL
 
 ![attachments/Pasted image 20220419135950.png](attachments/Pasted%20image%2020220419135950.png)
 
-(6) `C/C++ 通用` 中同样可以指定附加的 include 目录，测试过程中可以调高 `Warning Level` 以增大发现潜在 bug 的机率，测试通过以后生成 DLL 的过程中可以不用管。
+(6) `C/C++ 通用` 中同样可以指定附加的 include 目录。测试过程中可以调高 `Warning Level` 以增大发现潜在 bug 的机率，测试通过以后生成 DLL 的过程中可以不用管。为了加快编译速度，可以启用多线程编译 `Multi-processor Compilation`。
 
-![attachments/Pasted image 20220419141051.png](attachments/Pasted%20image%2020220419141051.png)
+![](attachments/Pasted%20image%2020220420232550.png)
 
 (7) `C/C++ 优化` 主要用于 Release 版，优化级别越高，程序的执行速度可能越快。在 Debug 模式下最好不要优化，否则单步执行时可能出现莫名其妙的跳转，原因是部分小函数被优化掉了。
 
