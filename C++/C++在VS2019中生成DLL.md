@@ -249,11 +249,11 @@ p2 print: P2 is of age 20
 
 (1) lib 目录：在 `VC++ 目录` 下面的 `Library Directories`，直接添加对应的路径，如果生成时按照一定的规律指定输出路径，此处也可以使用类似的路径写法。如果不给定 lib 目录而又在依赖项里添加了 `xxx.lib`，则会在编译期报错。
 
-![[attachments/Pasted image 20220420005606.png]]
+![attachments/Pasted image 20220420005606.png](attachments/Pasted%20image%2020220420005606.png)
 
 (2) dll 目录：在 `Debugging` 下面的 `Environment`，将对应的路径添加到 `PATH` 环境变量，DLL 文件相当于二进制的可执行文件，VS2019 在搜索时<span style="color:red">不是在 lib 目录下</span>查找的，因此这个要单独设置，否则会在运行过程中提示找不到对应的 DLL 文件。
 
-![[attachments/Pasted image 20220420010217.png]]
+![attachments/Pasted image 20220420010217.png](attachments/Pasted%20image%2020220420010217.png)
 
 配置完成以后则可以正常使用 DLL 运行自己的程序。
 
